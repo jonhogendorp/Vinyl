@@ -16,3 +16,5 @@ $router->get('users', 'App/Controllers/UserController.php@index');
 $router->post('users/store', 'App/Controllers/UserController.php');
 
 $router->get('artists', 'App/Controllers/ArtistController.php@index');
+$router->get('albums', 'App/Controllers/AlbumsController.php@index');
+

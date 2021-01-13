@@ -2,19 +2,16 @@
 
 return [
     // Name of the scheme
-    'table_name' => 'artists',
+    'table_name' => 'vinyl',
 
     // Query to drop the scheme
-    'drop_scheme' => "DROP TABLE IF EXISTS `artists`",
+    'drop_scheme' => "DROP TABLE IF EXISTS `vinyl`",
 
     // The scheme
-    'scheme' => "CREATE TABLE `artists` (
+    'scheme' => "CREATE TABLE `vinyl` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
-        `first_name` varchar(80) NOT NULL,
-        `insertion` varchar(20),
-        `last_name` varchar(80) NOT NULL,
-        `country` int(11),
-        `birthday` date,
+        `artist` varchar(80) NOT NULL,
+        `album` varchar(80) NOT NULL,
         `created` timestamp NOT NULL,
         `updated` timestamp DEFAULT CURRENT_TIMESTAMP,
         `deleted` timestamp,
@@ -29,37 +26,29 @@ return [
         'type' => 'array',
         'data' => array(
         [
-            'first_name' => "Joe",
-            'last_name'  => "Satriani",
-            'country'    => 232,
-            'birthday'   => "1956-07-15",
+            'artist' => "Eagels",
+            'album'   => "Hotel California",
             'created'    => date('Y-m-d H:i:s'),
             'created_by' => 1
         ],
 
         [
-            'first_name' => "Steve",
-            'last_name'  => "Vai",
-            'country'    => 232,
-            'birthday'   => "1960-06-06",
+            'artist' => "Simon",
+            'album'   => "Logitech",
             'created'    => date('Y-m-d H:i:s'),
             'created_by' => 1
         ],
 
         [
-            'first_name' => "John",
-            'last_name'  => "Petrucci",
-            'country'    => 232,
-            'birthday'   => "1967-07-12",
+            'artist' => "Samsung",
+            'album'   => "Oneil",
             'created'    => date('Y-m-d H:i:s'),
             'created_by' => 1
         ],
 
         [
-            'first_name' => "Yngwie",
-            'last_name'  => "Malmsteen",
-            'country'    => 200,
-            'birthday'   => "1968-07-12",
+            'artist' => "Koffie",
+            'album'   => "Kop",
             'created'    => date('Y-m-d H:i:s'),
             'created_by' => 1
         ]),
